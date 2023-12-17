@@ -1,0 +1,844 @@
+/* Importing a font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+/* Applying these styles to all elements in the HTML document */
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Styling for the whole webpage body */
+body {
+background: linear-gradient(to right, #080808, #3e0303);   /* Start and end colors of the gradient */
+overflow-x: hidden;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/* ********************************************Styling for the header part started******************************************** */
+
+/* Styling for the header section with an ID of 'header' */
+#header {
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    background-image: url(assets/images/image.png); /* Background image */
+    background-size: contain; /* Image size */
+    background-position: right; /* Image position */
+    background-repeat: no-repeat; /* No image repetition */
+}
+
+/* Styling for elements with a class of 'container' */
+.container {
+    padding: 2% 4%; /* Padding on the top and bottom, and left and right */
+}
+
+/* Styling for navigation (menu) */
+nav {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Centering items vertically */
+    flex-wrap: wrap; /* Wrapping items if they exceed the container's width */
+}
+
+/* Styling for logo */
+.logo {
+    width: 20%; /* Logo width */
+}
+
+/* Styling for list items in the navigation menu */
+nav ul li {
+    display: inline-block; /* Display as inline block */
+    list-style: none; /* No bullet points */
+    margin: 10px 20px; /* Margins around each list item */
+}
+
+/* Styling for links within navigation menu list items */
+nav ul li a {
+    -webkit-background-clip: text; /* Creating a colorful text effect */
+    color: transparent; /* Making text transparent */
+    background-clip: text; /* Applying background to text */
+    text-decoration: none; /* No underlines or decoration */
+    transition: 0.5s ease all; /* Smooth transition effect */
+    font-size: 18px; /* Font size */
+    font-weight: bolder; /* Bold font weight */
+    animation: colorChange 5s infinite alternate; /* Applying animation */
+    position: relative; /* Relative positioning */
+}
+
+/* Keyframes animation for changing text color */
+@keyframes colorChange {
+    0% {
+        background-image: linear-gradient(to right, #f7fb7a, #b5f988, #16d4e5);
+        background-position: 0% 40%;
+    }
+    80% {
+        background-image: linear-gradient(to left, #fff760, #fa99be, #ffb731);
+        background-position: 40% 80%;
+    }
+    100% {
+        background-image: linear-gradient(to right, #fff760, #f28fc5, #16d4e5);
+        background-position: 100% 80%;
+    }
+}
+
+/* Styling for a pseudo-element (after) within navigation menu links */
+nav ul li a::after {
+    content: ''; /* Empty content */
+    width: 0; /* Initially no width initially invisible*/
+    height: 3px; /* Height of the line */
+    background: #ff0000; /* Line color */
+    position: absolute; /* Positioned absolutely */
+    left: 0; /* Aligned to the left */
+    bottom: -6px; /* Positioned below the text */
+    transition: 0.5s; /* Smooth transition effect */
+}
+
+/* Styling when hovering over navigation menu links */
+nav ul li a:hover::after {
+    width: 100%; /* Full width on hover and becomes visible and moves up by 3 pixels when you hover over a link. */
+}
+
+.intro {
+  margin-top: 140px;
+  opacity: 0;  /* This sets the opacity (transparency) of the element to 0, making it completely invisible. */
+  animation: fade-in 5.5s infinite forwards, move-up 5.5s infinite forwards;
+
+
+}
+
+.intro-text {
+  font-size: 30px;
+  color: #33f1ce;
+  margin: 0;
+}
+
+.intro-heading {
+  font-size: 25px;
+  -webkit-background-clip: text; /* Creating a colorful text effect */
+    color: transparent; /* Making text transparent */
+    background-clip: text; /* Applying background to text */
+    background-image: linear-gradient(to right,  #f8e977, #f28fc5, #16d4e5);
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+@keyframes fade-in {
+  0% {
+     opacity: 0;  /*  At the beginning (0% progress), the element's opacity is 0, making it invisible. */
+  }
+  40% {
+    opacity: 1;
+}
+80% {
+  opacity: 1;
+}
+
+  100% {
+       opacity: 1; /*  At the end (100% progress), the element's opacity becomes 1, making it fully visible. */
+  }
+}
+
+@keyframes move-up {
+  0% {
+       transform: translateY(30px); /* At the beginning (0% progress), the element is translated (moved) 30 pixels up from its original position. */
+  } 
+  40% {
+    transform: translateY(0); 
+}
+60% {
+  transform: translateY(0);
+}
+  100% {
+       transform: translateY(0); /* At the end (100% progress), the element is back to its original position, creating a smooth upward and downward motion effect. */
+  }
+}
+/* ********************************************Styling for the header part completed******************************************** */
+
+/* ********************************************Styling for the about part started******************************************** */
+
+#about {
+  background-image: linear-gradient(to right, #26a790, #080808);
+  padding: 57px 4% 57px 4%; /* Adjust the left and right padding as needed */
+  overflow-x: hidden;
+}
+
+.row{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.about-col1 {
+  flex-basis: 35%;
+}
+
+.about-col1 img{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Box shadow */
+  border-radius: 15px;
+}
+
+.about-col2 {
+  flex-basis: 60%;
+  opacity: 0;
+  animation: fade-in 5s infinite forwards;
+}
+
+/*Keyframes animation for fading in */
+@keyframes fade-in {
+  0% {
+      opacity: 0; /* Start with no opacity */
+      transform: translateY(20px); /* Slightly move it down */
+  }
+  50% {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Back to original position */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Back to original position */
+}
+} 
+
+.sub-title{
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+
+.para{
+  color: rgb(255, 255, 255); 
+  font-size: 18px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.tab-titles{
+display: flex;
+margin: 20px 0 30px;
+}
+.tab-links{
+margin-right: 50px;
+font-size: 18px;
+font-weight: 500;
+cursor: pointer;
+position: relative;
+color: rgb(234, 211, 39); 
+}
+
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff0000; /* Line color */
+  position: absolute; 
+  left: 0; 
+  bottom: -8px;
+  transition: 0.5s; 
+}
+
+.tab-links.active-link::after{
+  width: 50%;
+}
+.tab-contents ul li{
+  list-style: none;
+  margin: 10px 0px;
+  font-size: 15px;
+  color: white;
+}
+
+.tab-contents ul li span{
+  color: #ff9538;
+  font-weight: 500;
+}
+
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}
+
+/* ********************************************Styling for the about part completed******************************************** */
+
+/* ********************************************Styling for the service part started******************************************** */
+
+#skills {
+  padding: 80px 0px 120px 0px;
+}
+.sub-title1{
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+  animation: fade-in 5s infinite forwards;
+  letter-spacing: 2px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  color: white;
+}
+
+.skills-list div {
+  background-image: linear-gradient( #26a790, #080808);
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-right: 10px solid transparent; /* Added transparent border */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Added transitions */
+  border-radius: 15px;
+}
+
+.skills-list div:hover {
+  background-image: linear-gradient(#080808, #26a790);
+  transform: scale(1.05); /* Scale up the div on hover */
+  color: #ffffff;
+}
+
+.skills-list div i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.skills-list div h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.skills-list div p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.skills-list div a {
+  color: #ff9538;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.skills-list div a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* ********************************************Styling for the service part completed******************************************** */
+
+/* ********************************************Styling for the projects part completed******************************************** */
+
+#projects {
+  background-image: linear-gradient(to right, #26a790, #080808);
+  padding: 60px 4% 60px 4%; /* Adjust the left and right padding as needed */
+  overflow: hidden;
+}
+
+.project-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.project{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer{
+  width: 100%;
+  height: 0;
+  background: linear-gradient( rgb(0, 0, 0, 0.6), rgb(54, 3, 3));
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  display: flex;
+justify-content: center;
+text-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 35px;
+  font-size: 15px;
+  transition: height 0.5s;
+}
+
+.layer h3{
+  font-weight: 500;
+  margin: 5px;
+}
+
+.layer a{
+ margin-top: 5px;
+ color: #ff004f;
+ text-decoration: none;
+ font-size: 18px;
+ line-height: 30px;
+ background-color: #fff;
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ text-align: center;
+}
+
+.project:hover img{
+  transform: scale(1.1);
+}
+
+.project:hover .layer{
+  height: 100%;
+}
+
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff6600;
+  padding: 12px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+
+.btn:hover{
+  background: linear-gradient(#ff6600,  #000000);
+}
+/* ********************************************Styling for the projects part completed******************************************** */
+
+/* ********************************************Styling for the Resume and Contact part started******************************************** */
+
+#contact{
+  background: linear-gradient(to right, #080808, #3e0303);   /* Start and end colors of the gradient */
+  padding: 10px 0% 0px 0%; /* Adjust the left and right padding as needed */
+  overflow: hidden;
+}
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+}
+
+.contact-left p{
+  margin-top: 30px;
+  color: white;
+}
+
+.contact-left p i{
+  color: #16d4e5;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.social-icons{
+  margin-top: 30px;
+}
+
+.social-icons a{
+text-decoration: none;
+font-size: 28px;
+margin-right: 10px;
+color: #ffffff;
+display: inline-block;
+transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+  color: #16d4e5;
+  transform: translateY(-5px);
+}
+
+.btn2{
+display: inline-block;
+background: transparent;
+margin-bottom: 7%;
+margin-top: 5%;
+}
+
+.contact-right form{
+  width: 100%;
+}
+
+form input, form textarea{
+width: 100%;
+border: 0;
+outline: none;
+background: #ffffff;
+padding: 15px;
+margin: 15px 0px;
+color: #000000;
+font-size: 18px;
+border-radius: 6px;
+}
+
+.copyright{
+width: 100%;
+text-align: center;
+color: rgb(255, 255, 255);
+padding: 15px 0;
+background-image: linear-gradient(to right, #26a790, #080808);
+font-weight: 300;
+margin: 0%;
+}
+
+.copyright i{
+color: #ff0000;
+}
+
+#icon{
+  display: none;
+}
+/* ********************************************Styling for the Resume and Contact part completed******************************************** */
+
+/* ********************************************Media Query part started for small screens******************************************** */
+
+@media only screen and (max-width : 600px) {
+
+  #icon{
+    display: block;
+    font-size: 25px;
+    color: #f8e977;
+  }
+
+  nav ul{
+  background: rgb(54, 1, 1); 
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100vh;
+  padding-top: 50px;
+  z-index: 2;
+  transition: right 0.5s;
+  }
+
+  nav ul li{
+  display: block; 
+  margin: 25px;
+  }
+
+  nav ul #icon{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+  }
+
+  #header{
+    background-image: url(assets/images/image.png);
+    background-position: bottom;
+
+  }
+
+  .logo {
+    width: 35%; /* Logo width */
+  }
+
+
+  .intro {
+    margin-top: 560px;
+  }
+  .intro-text{
+    margin-top:0px;
+    font-size: 25px;
+    color: rgb(234, 211, 39);
+    font-weight: 700;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+  
+  .intro-heading{
+    font-size: 20px;
+    color:rgb(234, 211, 39);
+    font-weight: 500;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+
+   .about-col-1, .about-col-2{
+    flex-basis: 100%;
+    } 
+  
+    .about-col-1{ margin-bottom: 30px;
+      }
+      .about .container{
+        text-align: justify;
+        align-items: center;
+      }
+      .contact-left, .contact-right{
+        flex-basis: 100%;
+      }
+}
+/* ********************************************Media Query part completed for small screens******************************************** */
+
+
+/* ********************************************Media Query part started for 375 screens******************************************** */
+
+@media only screen and (max-width : 375px){
+  #header, #about, #skills, #projects, #contact{
+overflow-x: hidden;
+  }
+  .logo {
+    width: 35%; /* Logo width */
+  }
+
+  .intro {
+    margin-top: 500px;
+    text-align: justify;
+  }
+  .intro-text{
+    margin-top:0px;
+    font-size: 25px;
+    color: rgb(234, 211, 39);
+    font-weight: 700;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+  .intro-heading{
+    font-size: 17px;
+    color:rgb(234, 211, 39);
+    font-weight: 500;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+
+  .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+    .about-col1 img{
+      width: 280px ;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-col2{
+      flex-basis: 20%;
+      width: 100%;
+    }
+}
+
+/* ********************************************Media Query part completed for 375 screens******************************************** */
+
+/* ********************************************Media Query part started for 414 screens******************************************** */
+
+@media only screen and (max-width : 414px) {
+
+  .logo {
+    width: 35%; /* Logo width */
+  }
+
+  .intro {
+    margin-top: 720px;
+    text-align: justify;
+  }
+  .intro-text{
+    margin-top:0px;
+    font-size: 26px;
+    color: rgb(234, 211, 39);
+    font-weight: 700;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+  .intro-heading{
+    font-size: 19px;
+    color:rgb(234, 211, 39);
+    font-weight: 500;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+
+  .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+    .about-col1 img{
+      width: 290px ;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-col2{
+      flex-basis: 20%;
+      width: 100%;
+    }
+
+}
+
+/* ********************************************Media Query part completed for 414 screens******************************************** */
+
+/* ********************************************Media Query part started for 390 screens******************************************** */
+
+
+@media only screen and (max-width : 390px) {
+
+  .logo {
+    width: 35%; /* Logo width */
+  }
+
+  .intro {
+    margin-top: 657px;
+    text-align: justify;
+  }
+  .intro-text{
+    margin-top:0px;
+    font-size: 28px;
+    color: rgb(234, 211, 39);
+    font-weight: 700;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+  .intro-heading{
+    font-size: 18px;
+    color:rgb(234, 211, 39);
+    font-weight: 500;
+    text-align: left;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+
+  .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+    .about-col1 img{
+      width: 290px ;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-col2{
+      flex-basis: 20%;
+      width: 100%;
+    }
+
+}
+
+
+/* ********************************************Media Query part completed for 390 screens******************************************** */
+
+@media only screen and (max-width : 393px) {
+
+  .logo {
+    width: 35%; /* Logo width */
+  }
+
+  .intro {
+    margin-top: 660px;
+    text-align: justify;
+  }
+  .intro-text{
+    margin-top:0px;
+    font-size: 28px;
+    color: rgb(234, 211, 39);
+    font-weight: 700;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+  .intro-heading{
+    font-size: 18px;
+    color:rgb(234, 211, 39);
+    font-weight: 500;
+    text-align: left;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+
+  .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+    .about-col1 img{
+      width: 290px ;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-col2{
+      flex-basis: 20%;
+      width: 100%;
+    }
+
+}
+
+/* ********************************************Media Query part started for 390 screens******************************************** */
+
+
+@media only screen and (max-width : 360px) {
+
+  .logo {
+    width: 35%; /* Logo width */
+  }
+
+  .intro {
+    margin-top: 560px;
+    text-align: justify;
+  }
+  .intro-text{
+    margin-top:0px;
+    font-size: 28px;
+    color: rgb(234, 211, 39);
+    font-weight: 700;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+  .intro-heading{
+    font-size: 16px;
+    color:rgb(234, 211, 39);
+    font-weight: 500;
+    text-align: left;
+    -webkit-background-clip: none; 
+    background-clip: none;
+    background-image: none;
+  }
+
+  .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+    .about-col1 img{
+      width: 290px ;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-col2{
+      flex-basis: 20%;
+      width: 100%;
+    }
+
+}
+

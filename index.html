@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/dd820de985.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ****************************************header part started**************************************** -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="assets/images/logo.png" alt="" class="logo" />
+          <ul id="sidemenu">
+            <li><a target="blank" href="#header">Home</a></li>
+            <li><a target="blank" href="#about">About</a></li>
+            <li><a target="blank" href="#skills">Skills</a></li>
+            <li><a target="blank" href="#projects">Projects</a></li>
+            <li><a target="blank" href="#contact">Resume</a></li>
+            <li><a target="blank" href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" id="icon" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" id="icon" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="intro">
+          <p class="intro-text">Web Developer</p>
+          <h1 class="intro-heading">
+            Hi, I'm a passionate web developer <br />
+            crafting digital experiences that merge <br />
+            creativity and functionality
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- ****************************************header part completed**************************************** -->
+
+    <!-- ****************************************about part started**************************************** -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col1">
+            <img src="assets/images/imaget.PNG" alt="" />
+          </div>
+          <div class="about-col2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="para">
+              Hi there! I'm Arfa Younus, who loves making websites look and work
+              great. I'm good at the front-end part, which is like the cool
+              stuff you see on websites. I've made some projects you can check
+              out projects I've worked on in the project section.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills1')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills1">
+              <ul>
+                <li>
+                  <span>Web development</span><br />HTML, CSS, Bootstrap,
+                  Javascript
+                </li>
+                <li><span>Canva</span><br />Graphic Creation</li>
+                <li><span>MS Office</span><br />Ms word, Excel, Powerpoint</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Internship at CodeSoft in 2023</span><br />Web
+                  development
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>Currently undergoing</span><br />Web and app development
+                  training at SMIT
+                </li>
+                <li><span>2023</span><br />BSCS from SMIU</li>
+                <li>
+                  <span>2018</span><br />Inter from KMA girls degree college
+                </li>
+                <li><span>2016</span><br />Matric from HM school</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ****************************************about part completed**************************************** -->
+
+    <!-- ****************************************Skills part started**************************************** -->
+    <div id="skills">
+      <div class="container">
+        <h1 class="sub-title1">My skills</h1>
+        <div class="skills-list">
+          <div>
+            <i class="fas fa-code"></i>
+            <h2>Web development</h2>
+            <p>
+              Crafting digital experiences through innovative coding and design,
+              bringing your ideas to life on the web
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>Canva</h2>
+            <p>
+              Creating eye-catching flyers using Canva for effective visual communication.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-regular fa-file"></i>
+            <h2>Ms Office</h2>
+            <p>
+              Skills in document creation, formatting, and dynamic presentation design.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ****************************************Skills part completed**************************************** -->
+
+    <!-- ****************************************projects part started**************************************** -->
+
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title1">Projects</h1>
+        <div class="project-list">
+          <div class="project">
+            <img
+              src="assets/images/ecommerce.PNG"
+              height="200px"
+              alt=""
+            />
+            <div class="layer">
+              <h3>E-commerce Website</h3>
+              <p>
+                A visually appealing online shopping destination crafted using
+                HTML, CSS, and JavaScript
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project">
+            <img src="assets/images/chatbot.PNG" height="200px" alt="" />
+            <div class="layer">
+              <h3>ChatBot</h3>
+              <p>
+                An interactive platform integrating HTML, CSS, and JavaScript to
+                provide dynamic and engaging conversational
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="project">
+            <img src="assets/images/calculator.PNG" height="200px" alt="" />
+            <div class="layer">
+              <h3>Calculator</h3>
+              <p>
+                A user-friendly online calculator built with HTML, CSS, and
+                JavaScript for quick and accurate mathematical computations
+              </p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+
+ <!-- ****************************************projects part completed**************************************** -->
+
+ <!-- ****************************************resume and contact part started**************************************** -->
+
+<div id="contact">
+<div class="container">
+  <div class="row">
+    <div class="contact-left">
+      <h1 class="sub-title1">Contact Me</h1>
+      <p><i class="fa-solid fa-paper-plane"></i> contact@gmail.com</p>
+      <p><i class="fa-solid fa-square-phone"></i> 090078601</p>
+      <div class="social-icons">
+        <a href="https://facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://twitter.com/"><i class="fa-brands fa-square-twitter"></i></a>
+        <a href="https://instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <a href="assets/My CV.pdf" download class="btn btn2">Download CV</a>
+    </div>
+    <div class="contact-right">
+      <form action="">
+        <input type="text" name="Name" placeholder="Enter Your Name" required>
+        <input type="email" name="Email" placeholder="Enter Your Email" required>
+        <textarea name="meassage" rows="6" placeholder="Enter Your Message" required></textarea>
+        <button class="btn btn2">Submit</button>
+      </form>
+        </div>
+  </div>
+</div>
+<div class="copyright">
+  <p>Copyright © Arfa Younus <i class="fa-solid fa-heart"></i> </p>
+</div>
+</div>
+
+ <!-- ****************************************resume and contact part completed**************************************** -->
+
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
